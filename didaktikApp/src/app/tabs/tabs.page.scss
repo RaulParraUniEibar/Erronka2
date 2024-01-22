@@ -25,6 +25,11 @@ ion-tabs {
     ion-content {
       margin-top: 0; /* Ajusta el margen superior si es necesario */
     }     
+    
+    ion-label {
+      white-space: normal;
+    }
+    
   }
 
 .toolbar-container {
