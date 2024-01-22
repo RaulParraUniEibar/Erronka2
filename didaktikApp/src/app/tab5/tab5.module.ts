@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { Tab5PageRoutingModule } from './tab5-routing.module';
 
 import { Tab5Page } from './tab5.page';
@@ -13,6 +14,7 @@ import { Tab5Page } from './tab5.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    ExploreContainerComponentModule,
     Tab5PageRoutingModule
   ],
   declarations: [Tab5Page]
