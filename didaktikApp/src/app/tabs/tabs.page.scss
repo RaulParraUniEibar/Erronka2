@@ -1,1 +1,33 @@
+ion-tabs {
+    display: flex;
+    height: 100vh; /* Ajusta según sea necesario */
+  
+    ion-tab-bar {
+      flex-direction: column;
+      width: 80px; /* Ancho de la barra de pestañas a la izquierda */
+      height: 100%; /* Ajusta según sea necesario */
+    }
+  
+    ion-tab-button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    ion-router-outlet {
+      flex: 1;
+      overflow: hidden;
+    }
+  
+    ion-header, ion-toolbar {
+      display: none; /* Oculta el ion-toolbar */
+    }
+  
+    ion-content {
+      margin-top: 0; /* Ajusta el margen superior si es necesario */
+    }     
+  }
 
+.toolbar-container {
+    display: none;
+}
+  
