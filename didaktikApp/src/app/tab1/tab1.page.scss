@@ -1,0 +1,28 @@
+.paragraph-container {
+    margin-left: 40vh;
+    margin-top: 2%;
+  }
+  
+  .image-container {
+    margin-top: 2%;
+  }
+  
+  .center-images {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-wrapper {
+    margin-right: 1%;
+  }
+
+  #argazki1 {
+    margin-left: 10vh; /* Ajusta según sea necesario para mover argazki2 más a la derecha */
+  }
+
+  #argazki2 {
+    margin-left: 30vh; /* Ajusta según sea necesario para mover argazki2 más a la derecha */
+  }
