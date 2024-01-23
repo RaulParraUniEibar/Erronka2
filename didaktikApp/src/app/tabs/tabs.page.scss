@@ -1,40 +1,49 @@
 ion-tabs {
-    display: flex;
-    height: 100vh; /* Ajusta según sea necesario */
-  
-    ion-tab-bar {
-      flex-direction: column;
-      width: 20%; /* Ancho de la barra de pestañas a la izquierda */
-      height: 100%; /* Ajusta según sea necesario */
-      
-    }
-  
-    ion-tab-button {
-      width: 100%;
-      text-align: center;
-      background-color: aqua;
-    }
-  
-    ion-router-outlet {
-      flex: 1;
-      overflow: hidden;
-    }
-  
-    ion-header, ion-toolbar {
-      display: none; /* Oculta el ion-toolbar */
-    }
-  
-    ion-content {
-      margin-top: 0; /* Ajusta el margen superior si es necesario */
-    }     
-    
-    ion-label {
-      white-space: normal;
-    }
-    
-  }
-
-.toolbar-container {
-    display: none;
+  display: flex;
+  height: 100vh;
 }
-  
+
+ion-tab-bar {
+  flex-direction: column;
+  width: 15%; /* Ancho de la barra de pestañas */
+  height: 100%; /* Ajusta según sea necesario para la altura de la barra de pestañas */
+  background-color: #90C5F6;
+}
+
+ion-tab-button {
+  width: 100%;
+  text-align: center;
+  background-color: #90C5F6;
+  padding: 2px; /* Ajusta según sea necesario para el espacio interno de los botones */
+  height: 20px; /* Ajusta la altura de los botones */
+  margin-bottom: 1px; /* Ajusta según sea necesario para el espacio entre botones */
+}
+
+ion-router-outlet {
+  flex: 1;
+  overflow: hidden;
+}
+
+ion-header, ion-toolbar {
+  display: none;
+}
+
+ion-content {
+  margin-top: 0;
+}
+
+ion-label {
+  white-space: normal;
+}
+
+
+.image-container {
+  position: absolute;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 800px; /* Ajusta según sea necesario para la posición vertical del div con respecto a la parte inferior */
+}
