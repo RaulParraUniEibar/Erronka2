@@ -3,6 +3,12 @@ ion-tabs {
   height: 100vh;
 }
 
+ion-tab-button:active ion-label,
+ion-tab-button:focus ion-label  {
+  font-weight: bold; /* Hace que la letra se ponga en negrita cuando el tab está activo */
+  color: black;
+}
+
 ion-tab-bar {
   flex-direction: column;
   width: 15%; /* Ancho de la barra de pestañas */
