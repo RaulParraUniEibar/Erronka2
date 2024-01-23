@@ -6,11 +6,13 @@ ion-tabs {
       flex-direction: column;
       width: 20%; /* Ancho de la barra de pestañas a la izquierda */
       height: 100%; /* Ajusta según sea necesario */
+      
     }
   
     ion-tab-button {
       width: 100%;
       text-align: center;
+      background-color: aqua;
     }
   
     ion-router-outlet {
