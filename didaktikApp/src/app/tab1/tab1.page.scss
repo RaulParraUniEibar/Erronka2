@@ -1,56 +1,8 @@
 .paragraph-container {
     margin-left: 40vh;
     margin-top: 2%;
+    max-width: 80%;
+    float: right;
   }
   
-  .image-container {
-    margin-top: 2%;
-  }
-  
-  .center-images {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-wrapper {
-    margin-right: 1%;
-  }
-
-  #argazki1 {
-    margin-left: 40vh; /* Ajusta según sea necesario para mover argazki2 más a la derecha */
-  }
-
-  #argazki2 {
-    margin-left: 30vh; /* Ajusta según sea necesario para mover argazki2 más a la derecha */
-  }
-
-  .icon-container {
-    margin-top: 20px; /* Ajusta según sea necesario para el espacio entre los iconos y las imágenes */
-    display: flex;
-    justify-content: center; /* Centra los divs horizontalmente */
-    align-items: center; /* Centra los divs verticalmente */
-  }
-  
-
-  #icon1,
-  #icon2 {
-  font-size: 14px; /* Ajusta según sea necesario para el tamaño de letra */
-  }
-
-  ion-icon {
-    font-size: 24px; /* Ajusta según sea necesario para el tamaño de los iconos */
-    margin-top: 5vh;
-  }
-  
-  #icon1 {
-    margin-right: 15vh; /* Ajusta según sea necesario para mover argazki2 más a la derecha */
-    margin-left: 40vh;
-  }
-
-  #icon2 {
-    margin-left: 20vh; /* Ajusta según sea necesario para mover argazki2 más a la derecha */
-  }
   
