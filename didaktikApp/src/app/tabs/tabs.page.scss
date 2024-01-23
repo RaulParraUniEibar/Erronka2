@@ -14,11 +14,12 @@ ion-tab-button {
   width: 100%;
   text-align: center;
   background-color: #90C5F6;
-  padding: 2px; /* Ajusta según sea necesario para el espacio interno de los botones */
-  height: 30px; /* Ajusta la altura de los botones */
+  height: 35px; /* Ajusta la altura de los botones */
   margin-bottom: 1px; /* Ajusta según sea necesario para el espacio entre botones */
 }
-
+ion-tab-button ion-icon {
+  font-size: 1vh; /* Ajusta según sea necesario */
+}
 ion-router-outlet {
   flex: 1;
   overflow: hidden;
