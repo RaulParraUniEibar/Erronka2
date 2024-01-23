@@ -15,7 +15,7 @@ ion-tab-button {
   text-align: center;
   background-color: #90C5F6;
   padding: 2px; /* Ajusta según sea necesario para el espacio interno de los botones */
-  height: 20px; /* Ajusta la altura de los botones */
+  height: 30px; /* Ajusta la altura de los botones */
   margin-bottom: 1px; /* Ajusta según sea necesario para el espacio entre botones */
 }
 
@@ -45,5 +45,6 @@ ion-label {
 img {
   width: 100%;
   height: auto;
-  margin-top: 800px; /* Ajusta según sea necesario para la posición vertical del div con respecto a la parte inferior */
+  margin-top: 82vh;/* Ajusta según sea necesario para la posición vertical del div con respecto a la parte inferior */
+
 }
