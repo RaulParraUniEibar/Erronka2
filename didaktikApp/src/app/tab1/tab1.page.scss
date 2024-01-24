@@ -4,7 +4,12 @@
     max-width: 80%;
     float: right;
   }
-  
+
+  body{
+    padding:0px;
+    margin: 0px;
+  }
+
   #img1{
     margin-top: 5vh;
     margin-left: 40vh;
@@ -23,6 +28,10 @@
     margin-bottom: 5vh;
     min-width: 20%;
   }
+  
+  ion-content {
+    --overflow: hidden;
+  }
 
   #audioak {    
     margin-top: 20vh; /* Ajusta el margen superior según tus necesidades */
@@ -40,3 +49,6 @@
     max-width: 80%;
   }
   
+  .container{
+    max-height: 1080px;
+  }
