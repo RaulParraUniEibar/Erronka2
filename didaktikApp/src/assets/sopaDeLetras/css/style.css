@@ -1,8 +1,8 @@
 /* CSS reset */
-
 body, h1 {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 h1 {
@@ -14,7 +14,6 @@ body {
 }
 
 /* Common */
-
 .fix {
   *zoom: 1;
 }
@@ -26,33 +25,39 @@ body {
 }
 
 /* Home */
-
 .wrap {
-  width: 960px;
+  max-width: 800px; /* Reducir el ancho máximo de la envoltura */
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 20px 0; /* Reducir el espacio de relleno superior e inferior */
   text-align: center;
-  position:relative;
+  position: relative;
 }
 
-.logo, #gameArea {
-  margin-bottom: 40px;
-}
-
-.ws-area, .ws-words {
+.ws-area,
+.ws-words {
   display: inline-block;
   vertical-align: top;
 }
 
 .ws-words {
-  margin-left: 20px;
+  margin-left: 10px; /* Reducir el espacio entre la sopa de letras y las palabras */
   text-align: left;
 }
 
 .ws-word {
-  margin-bottom: 4px;
+  margin-bottom: 2px; /* Reducir el espacio entre las palabras */
 }
 
-.ws-words ::first-letter{
-	text-transform : capitalize;
+.ws-words::first-letter {
+  text-transform: capitalize;
+}
+
+/* Reducir el tamaño de la sopa de letras */
+.ws-area {
+  font-size: 14px;
+}
+
+/* Reducir el tamaño del texto de las palabras */
+.ws-word {
+  font-size: 12px;
 }
