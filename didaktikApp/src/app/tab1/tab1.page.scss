@@ -33,8 +33,10 @@
   #img-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 5vh;
-    margin-left: 2vh;
+    margin-top: 0.5vh;
+    margin-left: 20vh;
     margin-bottom: 5vh;
+    float: left;
+    max-width: 80%;
   }
   
