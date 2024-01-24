@@ -7,23 +7,34 @@
   
   #img1{
     margin-top: 5vh;
-    margin-left: 50vh;
+    margin-left: 40vh;
     max-width: 70%;
     float: left;
     margin-bottom: 5vh;
+    min-width: 20%;
   }
 
   #img2{
     margin-top: 5vh;
-    margin-left: 50vh;
+    margin-left: 5vh;
+    margin-right: 2vh;
     max-width: 80%;
     float: left;
     margin-bottom: 5vh;
+    min-width: 20%;
   }
 
-  #audioak {
-    
+  #audioak {    
     margin-top: 20vh; /* Ajusta el margen superior según tus necesidades */
     margin-left: 50vh; /* Ajusta la posición horizontal según tus necesidades */
     clear: both; /* Asegura que el div de audioak se coloque debajo de las imágenes */
   }
+
+  #img-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    margin-left: 2vh;
+    margin-bottom: 5vh;
+  }
+  
