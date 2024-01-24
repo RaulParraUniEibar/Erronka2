@@ -3,6 +3,8 @@ body, h1 {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  overflow-x: hidden; /* Desactiva el desplazamiento horizontal */
+  overflow-y: hidden;
 }
 
 h1 {
@@ -13,10 +15,7 @@ body {
   color: #333;
 }
 
-/* Common */
-.fix {
-  *zoom: 1;
-}
+
 
 .fix:after {
   display: table;
@@ -28,9 +27,9 @@ body {
 .wrap {
   max-width: 800px; /* Reducir el ancho máximo de la envoltura */
   margin: 0 auto;
-  padding: 20px 0; /* Reducir el espacio de relleno superior e inferior */
   text-align: center;
   position: relative;
+  padding: 0px;
 }
 
 .ws-area,

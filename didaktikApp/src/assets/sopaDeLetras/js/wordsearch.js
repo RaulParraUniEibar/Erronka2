@@ -27,17 +27,17 @@
       'directions': ['W', 'N', 'WN', 'EN'],
       'gridSize': 10,
       'words': ['one', 'two', 'three', 'four', 'five'],
-	  'wordsList' : [],
+      'wordsList': [],
       'debug': false
     }
-    this.settings = Object.merge(settings, default_settings);
+    this.settings = Object.assign({}, default_settings, settings);
 
     // Check the words' length if it is overflow the grid
     if (this.parseWords(this.settings.gridSize)) {
       // Add words into the matrix data
       var isWorked = false;
 
-      while (isWorked == false) {
+      while (isWorked === false) {
         // initialize the application
         this.initialize();
 
@@ -383,26 +383,28 @@
    * Mouse event - Mouse down
    * @param {Object} item
    */
-  WordSearch.prototype.onMousedown = function(item) {
+  WordSearch.prototype.onTouchstart = function (item) {
     var _this = this;
-    return function() {
+    return function (event) {
+      event.preventDefault(); // Prevent default touch behavior
       _this.selectFrom = item;
     }
   }
 
   /**
-   * Mouse event - Mouse move
+   * Mouse event - Touch move
    * @param {Object}
    */
-  WordSearch.prototype.onMouseover = function(item) {
+  WordSearch.prototype.onTouchmove = function (item) {
     var _this = this;
-    return function() {
+    return function (event) {
+      event.preventDefault(); // Prevent default touch behavior
       if (_this.selectFrom) {
         _this.selected = _this.getItems(_this.selectFrom.row, _this.selectFrom.col, item.row, item.col);
 
         _this.clearHighlight();
 
-        for (var i = 0; i < _this.selected.length; i ++) {
+        for (var i = 0; i < _this.selected.length; i++) {
           var current = _this.selected[i],
             row = current.row + 1,
             col = current.col + 1,
@@ -415,16 +417,57 @@
   }
 
   /**
-   * Mouse event - Mouse up
+   * Mouse event - Touch end
    */
-  WordSearch.prototype.onMouseup = function() {
+  WordSearch.prototype.onTouchend = function () {
     var _this = this;
-    return function() {
+    return function () {
       _this.selectFrom = null;
       _this.clearHighlight();
       _this.lookup(_this.selected);
       _this.selected = [];
     }
+  }
+
+  // Add touch event listeners to canvas elements
+  WordSearch.prototype.addTouchListeners = function () {
+    var canvasElements = document.querySelectorAll('.ws-col');
+    var _this = this;
+
+    canvasElements.forEach(function (canvas) {
+      var item = _this.getMatrixItemFromCanvasElement(canvas);
+      if (item) {
+        canvas.addEventListener('touchstart', _this.onTouchstart(item), { passive: false });
+        canvas.addEventListener('touchmove', _this.onTouchmove(item), { passive: false });
+        canvas.addEventListener('touchend', _this.onTouchend(), { passive: false });
+      }
+    });
+  }
+
+  /**
+   * Get matrix item from canvas element
+   * @param {Element} canvas
+   * @return {Object|null}
+   */
+  WordSearch.prototype.getMatrixItemFromCanvasElement = function (canvas) {
+    var row = canvas.parentElement.dataset.row;
+    var col = canvas.dataset.col;
+
+    if (row !== undefined && col !== undefined) {
+      return this.matrix[row][col];
+    }
+
+    return null;
+  }
+
+  /**
+   * Initialize the application
+   */
+  WordSearch.prototype.initialize = function () {
+    // Rest of the initialize function...
+
+    // Add touch event listeners
+    this.addTouchListeners();
   }
 
 })();
