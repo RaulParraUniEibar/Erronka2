@@ -5,7 +5,22 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
- -->
+ --><script>
+  document.getElementById("btnLehenengoDesberdintasuna").onclick = function() {
+    playAudio('audio1');
+  };
+
+  function playAudio(audioId) {
+    var audio = document.getElementById(audioId);
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+</script>
+
  <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -18,32 +33,49 @@
   </div>
 
   <div id="img-container">
+
     <div id="img1">
         <img src="../../assets/img/argazki1.png" alt="Descripción de la imagen">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
-          <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
-        </svg>
+        <br><br>
+        <button (click)="playAudio('audio1')" [disabled]="isAudioPlaying">
+          <audio id="audio1" src="../../assets/audioak/audio1.mp3"></audio>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+              <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+          </svg>
           Lehenengo Desberdintasuna
+        </button>
           <br><br><br>
+          <button (click)="playAudio('audio2')" [disabled]="isAudioPlaying">
+            <audio id="audio2" src="../../assets/audioak/audio2.mp3"></audio>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
             <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
           </svg>
           Bigarren  Desberdintasuna
+        </button>
           <br><br><br>
     </div>
+
     <div id="img2">
         <img src="../../assets/img/argazki2.png" alt="Descripción de la imagen">
+        <br><br>
+        <button (click)="playAudio('audio3')" [disabled]="isAudioPlaying">
+          <audio id="audio3" src="../../assets/audioak/audio3.mp3"></audio>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
           <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
         </svg>
         Hirugarren Desberdintasuna
+      </button>
         <br><br><br>
+        <button (click)="playAudio('audio4')" [disabled]="isAudioPlaying">
+          <audio id="audio4" src="../../assets/audioak/audio4.mp3"></audio>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
           <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
         </svg>
         Laugarren Desberdintasuna
+      </button>
         <br><br><br>
     </div>
+
   </div>
 
 
