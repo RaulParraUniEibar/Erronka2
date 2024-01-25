@@ -52,3 +52,9 @@
   .container{
     max-height: 1080px;
   }
+
+  #nextbutton {
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+    margin-left: 130vh;
+    clear: both; /* Asegura que el div de nextbutton se coloque debajo de los elementos anteriores */
+}
