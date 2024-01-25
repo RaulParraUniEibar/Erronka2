@@ -10,32 +10,47 @@ import { NavController } from '@ionic/angular';
 export class Tab1Page {
 
   isAudioPlaying: boolean = false;
+  areAudiosPlayed: boolean = false;
 
   @ViewChild('btnLehenengoDesberdintasuna', { static: false }) btnLehenengoDesberdintasuna: IonButton | undefined;
 
-  playAudio(audioId: string) {
-    if (this.isAudioPlaying) {
-      // Si ya hay un audio reproduciéndose, no hagas nada
-      return;
-    }
+playAudio(audioId: string) {
+  if (this.isAudioPlaying) {
+    // Si ya hay un audio reproduciéndose, no hagas nada
+    return;
+  }
 
-    const audio = document.getElementById(audioId) as HTMLAudioElement;
+  const audio = document.getElementById(audioId) as HTMLAudioElement;
 
-    audio.onended = () => {
-      // Se llama cuando la reproducción del audio termina
-      this.isAudioPlaying = false;
-    };
+  audio.onended = () => {
+    // Se llama cuando la reproducción del audio termina
+    this.isAudioPlaying = false;
 
-    this.isAudioPlaying = true;
+    // Verificar si todos los audios se han reproducido
+    this.areAudiosPlayed = this.checkIfAllAudiosPlayed();
+  };
 
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-      audio.currentTime = 0;
-      this.isAudioPlaying = false;
+  this.isAudioPlaying = true;
+
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+    audio.currentTime = 0;
+    this.isAudioPlaying = false;
+  }
+}
+
+checkIfAllAudiosPlayed(): boolean {
+  // Verificar si todos los audios se han reproducido
+  for (let i = 1; i <= 4; i++) {
+    const audio = document.getElementById("audio" + i) as HTMLAudioElement;
+    if (audio && !audio.ended) {
+      return false;
     }
   }
+  return true;
+}
 
   stopAllAudio() {
     // Detener la reproducción de todos los elementos de audio
