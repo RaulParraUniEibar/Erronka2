@@ -11,22 +11,24 @@
   }
 
   #img1{
-    margin-top: 5vh;
+    margin-top: 2vh;
     margin-left: 40vh;
-    max-width: 50%;
+    max-width: 70%;
     float: left;
     margin-bottom: 5vh;
     min-width: 15%;
+    height: 200px;
   }
 
   #img2{
-    margin-top: 5vh;
+    margin-top: 2vh;
     margin-left: 5vh;
     margin-right: 2vh;
-    max-width: 60%;
+    max-width: 80%;
     float: left;
     margin-bottom: 5vh;
     min-width: 15%;
+    height: 200px;
   }
   
   ion-content {
@@ -53,8 +55,8 @@
     max-height: 1080px;
   }
 
-
-#nextbutton {
-    display: flex;
-    justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */
+  #nextbutton {
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+    margin-left: 130vh;
+    clear: both; /* Asegura que el div de nextbutton se coloque debajo de los elementos anteriores */
 }

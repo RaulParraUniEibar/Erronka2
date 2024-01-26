@@ -1,0 +1,126 @@
+/**
+* Wordfind.js 0.0.1
+* (c) 2012 Bill, BunKat LLC.
+* Wordfind is freely distributable under the MIT license.
+* For all details and documentation:
+*     http://github.com/bunkat/wordfind
+*/
+
+
+
+
+/**
+* Styles for the puzzle
+*/
+
+iframe {
+    overflow-y: hidden;
+    
+  }
+  .scroll-y {
+    overflow-y:hidden !important; 
+  }
+
+
+/* style for each square in the puzzle */
+
+#juego .puzzleSquare {
+    height: 30px;
+    width: 30px;
+    text-transform: uppercase;
+    background-color: white;
+    border: 0;
+    font: 1em sans-serif;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+
+/* indicates when a square has been selected */
+
+#juego .selected {
+    background-color: orange;
+}
+
+
+/* indicates that the square is part of a word that has been found */
+
+#juego .found {
+    background-color: yellowgreen;
+}
+
+#juego .solved {
+    background-color: purple;
+    color: white;
+}
+
+
+/* indicates that all words have been found */
+
+#juego .complete {
+    background-color: green;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Color de fondo del cuerpo */
+}
+
+.container {
+    margin-top: 5px;
+}
+
+.panel-default {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#panel-heading {
+    background-color: lightblue; /* Color de fondo del encabezado del panel */
+    color: #fff; /* Color del texto del encabezado del panel */
+    padding: 3px;
+    margin-top: 0; /* Elimina el margen superior del encabezado del panel */
+    height: 7vh;
+}
+
+h4 {
+    margin: 0; /* Elimina el margen predeterminado del h4 */
+}
+
+.panel-body {
+    display: flex;
+    align-items: baseline; /* Ajusta esto según sea necesario */
+}
+
+#Palabras {
+    text-align: left;
+    margin-right: 20px; /* Espacio entre las palabras y la sopa de letras */
+}
+
+#juego {
+    border: 1px solid #ccc; /* Borde alrededor de la sopa de letras */
+    padding: 10px;
+    background-color: #fff; /* Color de fondo del juego */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 10vh;
+}
+
+#Palabras ul {
+    list-style-type: none;
+}
+
+#Palabras li {
+    padding: 3px 0;
+    font: 1em sans-serif;
+}
+
+
+/* indicates that the word has been found */
+
+#Palabras .wordFound {
+    text-decoration: line-through;
+    color: gray;
+}
+
