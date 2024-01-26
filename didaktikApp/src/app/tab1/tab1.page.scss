@@ -56,7 +56,6 @@
   }
 
   #nextbutton {
-    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
-    margin-left: 130vh;
-    clear: both; /* Asegura que el div de nextbutton se coloque debajo de los elementos anteriores */
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */
 }
