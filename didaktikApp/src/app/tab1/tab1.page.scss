@@ -53,8 +53,8 @@
     max-height: 1080px;
   }
 
-  #nextbutton {
-    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
-    margin-left: 85%;
-    clear: both; /* Asegura que el div de nextbutton se coloque debajo de los elementos anteriores */
+
+#nextbutton {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */
 }
