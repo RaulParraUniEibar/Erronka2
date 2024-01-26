@@ -49,13 +49,12 @@
     max-width: 80%;
   }
   
-  .container {
-    position: relative;
+  .container{
+    max-height: 1080px;
   }
-  
+
   #nextbutton {
-    position: absolute;
-    top: 320px; /* Ajusta la posición superior según tus necesidades */
-    left: 102vh;
-  }
-  
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+    margin-left: 85%;
+    clear: both; /* Asegura que el div de nextbutton se coloque debajo de los elementos anteriores */
+}
