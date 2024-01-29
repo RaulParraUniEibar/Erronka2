@@ -8,6 +8,14 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  paragraphVisible = false;
+  showButton: boolean = true;
+  
+  mostrarParrafo() {
+    this.paragraphVisible = !this.paragraphVisible;
+    this.showButton = false;
+  }
+  
   isAudioPlaying: boolean = false;
   
   @ViewChild('btnLehenengoDesberdintasuna', { static: false }) btnLehenengoDesberdintasuna: IonButton | undefined;
