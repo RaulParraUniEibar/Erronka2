@@ -1,17 +1,56 @@
- <!--<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Tab 1
     </ion-title>
   </ion-toolbar>
 </ion-header>
--->
-<ion-content [fullscreen]="true">
+ -->
+ <script>
+  document.getElementById("btnSanJuanArkua").onclick = function() {
+    playAudio('SanJuanArkua');
+  };
+
+  function playAudio(audioId) {
+    var audio = document.getElementById(audioId);
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+</script>
+
+ <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+<div class="container"> 
+  <div id="galdera">
+    Zer dakizue San Juan Arkuaren inguruan? Ezaguna egiten zaizue?
+  </div>
+    
+  
+  <div class="paragraph-container">
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    San Juan Arkuak Gaztelugatxeko ermitara irteera ematen dio, Bermeo kanpoladetik isolatzeko helburua zuen.
+    <br><br>
+    <button (click)="playAudio('SanJuanArkua')" style="margin-right: 2vh;"> <!---->
+      <audio id="SanJuanArkua" src="../../assets/audioak/San-Juan-Arkua-testua.mp3"></audio>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+      <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+    </svg>
+    Azalpena
+    </button>
+    <br>
+    San Juan atariari horrela deitzen zaio, Gaztelugatxeko San Juan ermitara irteera ematen diolako. Dorre itxurako eraikin batean dago kokaturik eta harresiak zuen arku nagusia zen.
+    Atea XIV. mendean eraiki zen, arku baten bidez herriaren barnealdealdera irekiten da, kanpoaldera, berriz, arku zorrotz baten bidez. Arku beheratuaren gainean San Juan irudia duen horma-hobi bat dago.
+    Kondairaren arabera, San Juan Bautista hiru urratsetan iritsi zen Bermeoko portutik Gaztelugatxeko ermitara. Horietako bakoitzak arrastoa utzi zuen, lehena San Juan atariko arkuaren azpian ikus daiteke.
+  </div>
+  
+</div>
+
 </ion-content>

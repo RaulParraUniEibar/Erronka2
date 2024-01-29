@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
+import { IonButton } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,34 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  isAudioPlaying: boolean = false;
+  
+  @ViewChild('btnLehenengoDesberdintasuna', { static: false }) btnLehenengoDesberdintasuna: IonButton | undefined;
 
+  playAudio(audioId: string) {
+    if (this.isAudioPlaying) {
+      // Si ya hay un audio reproduciéndose, no hagas nada
+      return;
+    }
+  
+    const audio = document.getElementById(audioId) as HTMLAudioElement;
+  
+    audio.onended = () => {
+      // Se llama cuando la reproducción del audio termina
+      this.isAudioPlaying = false;
+  
+    };
+  
+    this.isAudioPlaying = true;
+  
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      this.isAudioPlaying = false;
+    }
+  }
   constructor() {}
 
 }
