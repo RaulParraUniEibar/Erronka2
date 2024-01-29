@@ -1,6 +1,7 @@
 import { Component,ViewChild } from '@angular/core';
 import { IonButton } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -44,6 +45,9 @@ export class Tab2Page {
       this.isAudioPlaying = false;
     }
   }
-  constructor() {}
-
+  constructor(private router: Router) { }
+  
+  redirigirAKahoot() {
+    window.open('https://create.kahoot.it/share/san-juan-arkua/46a3c0ae-a6fe-4a86-9a6d-8a3f0892912d', '_blank');
+  }
 }
