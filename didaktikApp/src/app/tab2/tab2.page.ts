@@ -45,9 +45,28 @@ export class Tab2Page {
       this.isAudioPlaying = false;
     }
   }
-  constructor(private router: Router) { }
+  constructor(private router: Router,private navCtrl: NavController) { }
   
   redirigirAKahoot() {
     window.open('https://create.kahoot.it/share/san-juan-arkua/46a3c0ae-a6fe-4a86-9a6d-8a3f0892912d', '_blank');
+  }
+  
+  stopAllAudio() {
+    // Detener la reproducción de todos los elementos de audio
+    for (let i = 1; i <= 4; i++) {
+      const audio = document.getElementById("audio" + i) as HTMLAudioElement;
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    }
+    this.isAudioPlaying = false;
+  }// ... Otro código ...
+
+  hurrengoaButtonClicked() {
+    this.stopAllAudio();
+    
+    this.navCtrl.navigateForward('/tabs/tab3'); // Ajusta la ruta según tu configuración de enrutamiento
+  
   }
 }

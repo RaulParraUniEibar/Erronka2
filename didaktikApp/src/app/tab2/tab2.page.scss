@@ -16,3 +16,9 @@
     font-weight: bold;
 }
 
+#ultimosbotones {
+  display: flex;
+  flex-direction: row; /* Asegura que los elementos hijos se alineen en una fila */
+  align-items: center; /* Alinea los elementos hijos verticalmente en el centro */
+  
+}

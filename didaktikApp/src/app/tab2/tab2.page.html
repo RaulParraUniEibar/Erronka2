@@ -62,19 +62,32 @@
     San Juan atariari horrela deitzen zaio, Gaztelugatxeko San Juan ermitara irteera ematen diolako. Dorre itxurako eraikin batean dago kokaturik eta harresiak zuen arku nagusia zen.
     Atea XIV. mendean eraiki zen, arku baten bidez herriaren barnealdealdera irekiten da, kanpoaldera, berriz, arku zorrotz baten bidez. Arku beheratuaren gainean San Juan irudia duen horma-hobi bat dago.
     Kondairaren arabera, San Juan Bautista hiru urratsetan iritsi zen Bermeoko portutik Gaztelugatxeko ermitara. Horietako bakoitzak arrastoa utzi zuen, lehena San Juan atariko arkuaren azpian ikus daiteke.
-    <br><br>
-    <button (click)="playAudio('Ariketa')" style="margin-right: 2vh;"> <!---->
-      <audio id="Ariketa" src="../../assets/audioak/Ariketa-San-Juan-Arkua.mp3"></audio>
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
-      <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
-    </svg>
-    Ariketa San Juan Arkua
-    </button>
-    <br><br>
-    <button id="kahoot" (click)="redirigirAKahoot()" style="width: 100px;">
-      <img src="../../assets/img/kahoot.png" style="width: 100%; height: 100%;">
-    </button>
+    <br><br>   
+    
+    <div id="ultimosbotones">
+      <button (click)="playAudio('Ariketa')" style="margin-right: 2vh;"> <!---->
+        <audio id="Ariketa" src="../../assets/audioak/Ariketa-San-Juan-Arkua.mp3"></audio>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+        <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+      </svg>
+      Ariketa San Juan Arkua
+      </button>
+      <br><br>
+  
+      
+      <button id="kahoot" (click)="redirigirAKahoot()" style="width: 100px; margin-left: 30vh;">
+        <img src="../../assets/img/kahoot.png" style="width: 100%; height: 100%;">
+      </button>
+
+      <button (click)="hurrengoaButtonClicked()" style="margin-left: 30vh;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+      </svg></button>
+
+    </div>
+
   </div>
+
 
 </div>
 
