@@ -1,6 +1,8 @@
 ﻿body {
     font-family: 'Segoe UI', Calibri, Arial;
     margin:0;
+    width: 110vh;
+    height: 69vh;
 }
 h2{
     font-weight:normal;
@@ -19,7 +21,15 @@ h4{
 }
 
 .puzzle {
-    width: 100%;
-    height: 100%;
+    width: 110vh;
+    height: 69vh;
     /* border: 1px solid black; */
 }
+
+iframe {
+    overflow-y: hidden;
+    
+  }
+  .scroll-y {
+    overflow-y:hidden !important; 
+  }

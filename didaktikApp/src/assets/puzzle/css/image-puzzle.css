@@ -1,12 +1,12 @@
 ﻿#collage hr {
     border: none;
-    border-top: 2px solid #f5f2f2;
+    border-top: 2px solid #ffffff;
     height: 1px;
 }
 
 #collage #playPanel {
-    background-color: #c2defc;
-    width: 100%;
+    background-color: #ffffff;
+    height: 69vh;
 }
 
 #collage #actualImageBox {
@@ -33,8 +33,8 @@
 
 #collage img#actualImage {
     border: 2px solid #a46;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
 }
 
 #collage #sortable {
@@ -43,11 +43,11 @@
     display: inline-block;
     margin: 10px;
     padding: 0;
-    width: 400px;
+    width: 350px;
 }
 
 #collage #sortable li {
-    background-size: 400% 400%;
+    background-size: 350% 350%;
     border: none;
     cursor: pointer;
     margin: 0;

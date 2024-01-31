@@ -8,7 +8,30 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  ngOnInit() {
+    const dialogElement = document.getElementById('dialog');
+    const speakerElement = document.querySelector('.speaker');
+    const textToReveal =
+      'Bermeoko San Frantziskoko komentuak Erdi Aroan (XIV. mendean) sortu zen. Horregatik, Bizkaiko komentu zaharrena da eta haren hondarrak elizan biltzen dira. Gaur egun, San Frantziskoko klaustroa lau angeluko espazio batez osatuta dago. Gainera, estilo gotikoa du, izan ere, Bizkaian kontserbatzen den gotiko bakarra da (Bilboko Santiagokoarekin batera).';
+    let index = 0;
 
+    function revealText() {
+      if (dialogElement) {
+        dialogElement.textContent = textToReveal.slice(0, index);
+        index++;
+
+        if (index <= textToReveal.length) {
+          setTimeout(revealText, 100); // Ajusta el tiempo para controlar la velocidad
+        }
+      }
+    }
+
+    if (speakerElement) {
+      speakerElement.textContent = 'Olag 💬';
+    }
+
+    revealText();
+  }
   isAudioPlaying: boolean = false;
   areAudiosPlayed: boolean = false;
 
