@@ -20,7 +20,7 @@ export class Tab3Page {
   playAudio(audioId: string) {
     if (this.isAudioPlaying) {
       // Si ya hay un audio reproduciéndose, deténlo
-      this.stopAllAudio();
+      //this.stopAllAudio();
       return;
     }
 
