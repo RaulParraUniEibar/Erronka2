@@ -27,7 +27,7 @@ export class Tab42Page {
       // Se llama cuando la reproducción del audio termina
       this.isAudioPlaying = false;
 
-      if (audioId === 'audio2') {
+      if (audioId === '2Audio') {
         this.LehenengoAudioaPlayed = true;
       }
     };

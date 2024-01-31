@@ -29,7 +29,7 @@ export class Tab4Page  {
       // Se llama cuando la reproducción del audio termina
       this.isAudioPlaying = false;
 
-      if (audioId === 'audio1') {
+      if (audioId === '1Audio') {
         this.LehenengoAudioaPlayed = true;
       }
     };
