@@ -75,7 +75,7 @@
       <br><br>
   
       
-      <button id="kahoot" (click)="redirigirAKahoot()" style="width: 100px; margin-left: 30vh;">
+      <button id="kahoot" *ngIf="audioAriketaPlayed" (click)="redirigirAKahoot()" style="width: 100px; margin-left: 30vh;">
         <img src="../../assets/img/kahoot.png" style="width: 100%; height: 100%;">
       </button>
 
