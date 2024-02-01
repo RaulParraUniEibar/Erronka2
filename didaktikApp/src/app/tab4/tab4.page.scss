@@ -11,7 +11,10 @@
     float: left;
     max-width: 80%;
   }
-
+  #pulpo{
+    width: 300px;
+    height: 200px;
+  }
   #img1{
     margin-left: 40vh;
     max-width: 70%;
@@ -19,19 +22,48 @@
     margin-bottom: 5vh;
     min-width: 15%;
     height: 180px;
+    margin-top: 15vh;
   }
 
   #img2{
-    margin-top: 10vh;
     margin-left: 5vh;
     margin-right: 2vh;
     max-width: 80%;
+    width: 100vh;
     float: left;
     margin-bottom: 5vh;
     min-width: 15%;
-    height: 180px;
+    height: 40px;
+    
   }
-
+  #pulpo{
+    margin-top: 10px;
+    float: left;
+    margin-left: 37vh;
+    height: 12vh;
+    width: 17vh;
+  }
+  .dialog-box {
+    width: 140vh;
+    border-radius: 5px;
+    margin: 20px;
+    margin-left: 5vh;
+    float: left;
+    padding: 5px;
+  }
+  
+  .dialog-text {
+    white-space: normal; /* Cambiando a 'normal' para permitir saltos de línea */
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .speaker {
+    font-weight: bold;
+    color: #3498db; /* Color azul */
+    font-size: 30px;
+  }
   #hurrengoaBtn {
     display: flex;
     justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */

@@ -32,18 +32,22 @@
     <div id="img-container">
 
       <div id="img1">
-          <img src="../../assets/img/Barco.png" alt="Descripción de la imagen" style="width: 780px; height: 200px;">
+          <img src="../../assets/img/Barco.png" alt="Descripción de la imagen">
           <br><br>
         
       </div>
       <div id="img2">
-        <button (click)="playAudio('2Audio')">
-          <audio id="2Audio" src="../../assets/audioak/BigarrenAudioa.mp3"></audio>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
-            <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
-          </svg>
-        </button>
-        Bermeoko 40 itsasontzi itsaso zabalera atera zen. Tamalez, ez zituzten tresna modernorik eta gehienek arraunekin eta belarekin nabigatzen zuten, iparrorratzaren laguntzaz. 
+        <div><img src="../../assets/img/pulpo.gif" style="width: 100px; height: 75px; float: right;"></div>
+        <div class="dialog-box">
+          <button id="btnAudio"(click)="playAudio('2Audio')">
+            <audio id="2Audio" src="../../assets/audioak/BigarrenAudioa.mp3"></audio>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+              <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+            </svg>
+          </button>
+          <div class="speaker">Olag:</div>
+              <div class="dialog-text" id="dialog3"></div>
+          </div>
       </div>
     </div>
 
@@ -53,7 +57,7 @@
         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
       </svg></button>
     </div>
-    
+
   </div>
 
 </ion-content>
