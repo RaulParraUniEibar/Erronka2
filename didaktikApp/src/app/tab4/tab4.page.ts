@@ -18,7 +18,7 @@ export class Tab4Page  {
   }
 
   revealText() {
-    const dialogElement = document.getElementById('dialog');
+    const dialogElement = document.getElementById('dialog5');
     const textToReveal = '1912ko abuztuaren 10ean...';
     let index = 0;
   
