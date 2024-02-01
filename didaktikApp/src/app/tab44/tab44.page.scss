@@ -1,0 +1,41 @@
+.container{
+    max-height: 1080px;
+  }
+
+#img-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15vh;
+    margin-left: 20vh;
+    margin-bottom: 5vh;
+    float: left;
+    max-width: 80%;
+  }
+
+  #img1{
+    margin-left: 40vh;
+    max-width: 70%;
+    float: left;
+    margin-bottom: 5vh;
+    min-width: 15%;
+    height: 180px;
+  }
+
+  #img2{
+    margin-top: 10vh;
+    margin-left: 5vh;
+    margin-right: 2vh;
+    max-width: 80%;
+    float: left;
+    margin-bottom: 5vh;
+    min-width: 15%;
+    height: 180px;
+  }
+
+  #hurrengoaBtn {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */
+    clear: both;
+    max-width: 80%;
+    margin-left: 20vh;
+}

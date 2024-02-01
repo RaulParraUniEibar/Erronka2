@@ -1,0 +1,59 @@
+<!--<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tab4</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+<script>
+
+  document.getElementById("btnLehenengoDesberdintasuna").onclick = function() {
+    playAudio('audio1');
+  };
+
+  function playAudio(audioId) {
+  var audio = document.getElementById(audioId);
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+  }
+</script>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+
+    <div id="img-container">
+
+      <div id="img1">
+          <img src="../../assets/img/personas.png" alt="Descripción de la imagen" style="width: 1200px; height: 200px;">
+          <br><br>
+        
+      </div>
+      <div id="img2">
+        <button (click)="playAudio('5Audio')">
+          <audio id="5Audio" src="../../assets/audioak/BostgarrenAudioa.mp3"></audio>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+            <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
+          </svg>
+        </button>
+        Guztira, 143 pertsonak hil ziren. Marinelen omenez, Bermeon, arrantzale museoaren ondoan estatua hauek aurki ditzakegu. Estatuek marinel horien familia, emazteen eta lagunen itxaropena eta  tristura sinbolizatzen dute.
+      </div>
+    </div>
+
+    <div id="hurrengoaBtn">
+      <button (click)="hurrengoaButtonClicked()" [disabled]="!(LehenengoAudioaPlayed)"> <!--[disabled]="!areAudiosPlayed"-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+      </svg></button>
+    </div>
+    
+  </div>
+
+</ion-content>

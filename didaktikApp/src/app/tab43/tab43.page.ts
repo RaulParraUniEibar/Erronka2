@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-tab42',
-  templateUrl: './tab42.page.html',
-  styleUrls: ['./tab42.page.scss'],
+  selector: 'app-tab43',
+  templateUrl: './tab43.page.html',
+  styleUrls: ['./tab43.page.scss'],
 })
-export class Tab42Page {
- 
+export class Tab43Page {
+
 
   isAudioPlaying: boolean = false;
   LehenengoAudioaPlayed: boolean = false;
@@ -27,7 +27,7 @@ export class Tab42Page {
       // Se llama cuando la reproducción del audio termina
       this.isAudioPlaying = false;
 
-      if (audioId === '2Audio') {
+      if (audioId === '3Audio') {
         this.LehenengoAudioaPlayed = true;
       }
     };
@@ -57,7 +57,8 @@ export class Tab42Page {
   hurrengoaButtonClicked() {
     // Detener todos los audios antes de navegar a la siguiente página
     this.stopAllAudio();
-    this.navCtrl.navigateForward('/tabs/tab43'); // Ajusta la ruta según tu configuración de enrutamiento
+    this.navCtrl.navigateForward('/tabs/tab44'); // Ajusta la ruta según tu configuración de enrutamiento
   }
+
 
 }
