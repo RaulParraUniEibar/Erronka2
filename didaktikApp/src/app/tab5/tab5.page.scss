@@ -1,0 +1,29 @@
+.container {
+    max-height: 1080px;
+}
+
+#img-container {
+    display: flex;
+    flex-direction: column;  /* Cambiado a columna para apilar elementos verticalmente */
+    align-items: center;     /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ginacanaimg img {
+    width: 90vh;
+}
+
+#divyoutube {
+    margin-top: 10px;  /* Ajusta el margen superior según tus preferencias */
+}
+
+#youtube {
+    width: 100px;
+    margin-left: 80vh;
+    margin-right: 30vh;
+}

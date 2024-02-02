@@ -11,5 +11,8 @@ export class Tab5Page implements OnInit {
 
   ngOnInit() {
   }
-
+  redirigirAYoutube() {
+    // Detener todos los audios antes de redirigir a Kahoot
+    window.open('https://www.youtube.com/watch?v=Ha8qGJ5KMKM&feature=youtu.be', '_blank');
+  }
 }

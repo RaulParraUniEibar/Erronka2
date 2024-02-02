@@ -4,11 +4,25 @@
   </ion-toolbar>
 </ion-header>
 -->
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">BERMEOKO PORTUA</ion-title>
+      <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
+    <link rel="preload" href="../../assets/img/Gincana.png" as="image">
   </ion-header>
-  <app-explore-container name="Tab 5 page"></app-explore-container>
+  <div class="container">
+
+    <div id="img-container">
+          <div id="ginacanaimg">
+          <img src="../../assets/img/Gincana.png">
+          </div>
+          <div id="divyoutube">
+          <button id="youtube"  (click)="redirigirAYoutube()" style="width: 100px; margin-left: 30vh;">
+            <img src="../../assets/img/youtube.jpg" style="width: 100%; height: 100%;">
+          </button>
+        </div>
+    </div>
+  </div>
 </ion-content>
