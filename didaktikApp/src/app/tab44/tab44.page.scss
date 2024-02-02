@@ -1,41 +1,69 @@
 .container{
-    max-height: 1080px;
-  }
+  max-height: 1080px;
+}
 
 #img-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15vh;
-    margin-left: 20vh;
-    margin-bottom: 5vh;
-    float: left;
-    max-width: 80%;
-  }
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+  margin-left: 20vh;
+  margin-bottom: 5vh;
+  float: left;
+  max-width: 80%;
+}
 
-  #img1{
-    margin-left: 40vh;
-    max-width: 70%;
-    float: left;
-    margin-bottom: 5vh;
-    min-width: 15%;
-    height: 180px;
-  }
+#pulpo{
+  width: 300px;
+  height: 200px;
+}
+#img1{
+  margin-left: 20vh;
+  max-width: 70%;
+  float: left;
+  margin-bottom: 5vh;
+  min-width: 15%;
+  height: 180px;
+  margin-top: 20vh;
+}
 
-  #img2{
-    margin-top: 10vh;
-    margin-left: 5vh;
-    margin-right: 2vh;
-    max-width: 80%;
-    float: left;
-    margin-bottom: 5vh;
-    min-width: 15%;
-    height: 180px;
-  }
+#img2{
+  margin-left: 5vh;
+  margin-right: 2vh;
+  max-width: 80%;
+  width: 100vh;
+  float: left;
+  margin-bottom: 5vh;
+  min-width: 15%;
+  height: 40px;
+  
+}
 
-  #hurrengoaBtn {
-    display: flex;
-    justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */
-    clear: both;
-    max-width: 80%;
-    margin-left: 20vh;
+.dialog-box {
+  width: 85vh;
+  border-radius: 5px;
+  margin: 20px;
+  margin-left: 5vh;
+  float: left;
+  padding: 5px;
+}
+
+.dialog-text {
+  white-space: normal; /* Cambiando a 'normal' para permitir saltos de línea */
+  overflow: hidden;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.speaker {
+  font-weight: bold;
+  color: #3498db; /* Color azul */
+  font-size: 20px;
+}
+
+#hurrengoaBtn {
+  display: flex;
+  justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */
+  clear: both;
+  max-width: 80%;
+  margin-left: 20vh;
 }
