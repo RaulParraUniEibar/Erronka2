@@ -18,7 +18,7 @@ export class Tab44Page  {
 
   revealText() {
     const dialogElement = document.getElementById('dialog69');
-    const textToReveal = 'Hala ere, hiru naufragok flotagailu inprobisatu bat egin zuten. Tamalez, bakarra geratu zen flotagailuan bizirik.';
+    const textToReveal = 'Hala ere, hiru naufragok flotagailu inprobisatu bat egin zuten. Zori txarrez, bakarra geratu zen flotagailuan bizirik.';
     let index = 0;
   
     const reveal = () => {
