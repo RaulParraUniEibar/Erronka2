@@ -53,10 +53,11 @@ export class Tab51Page {
     }
   }
 
-  playSound(soundId: string) { // Especificar el tipo de soundId
-    const audio = new Audio(`../../assets/audioak/${soundId}.mp3`);
+  playSound(soundId: string) {
+    const audio = document.getElementById(soundId) as HTMLAudioElement;
     audio.play();
   }
+ 
 
   shuffleArray(array: any[]) { // Especificar el tipo de array
     for (let i = array.length - 1; i > 0; i--) {
