@@ -8,9 +8,14 @@
   <div id="content">
     <div id="question">{{ currentQuestion?.question }}</div>
     <div id="answers">
-      <div *ngFor="let answer of shuffledAnswers" class="answer" (click)="checkAnswer(answer)">
-        {{ answer }}
-      </div>
+      <div *ngFor="let answer of shuffledAnswers"
+     class="answer"
+     [class.correct-answer]="answer === currentQuestion.correct_answer && answer === selectedAnswer"
+     [class.wrong-answer]="answer !== currentQuestion.correct_answer && answer === selectedAnswer"
+     (click)="checkAnswer(answer)">
+  {{ answer }}
+</div>
+
     </div>
   </div>
   <audio id="correctSound" src="../../assets/audioak/correct.mp3" type="audio/mp3"></audio>

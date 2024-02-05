@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import '@angular/compiler';
 
 @Component({
   selector: 'app-tab51',
@@ -9,6 +8,7 @@ import '@angular/compiler';
 export class Tab51Page {
   currentQuestion: any;
   shuffledAnswers: any[] = []; // Inicializar el array
+  selectedAnswer: any = null; // Nueva propiedad para rastrear la respuesta seleccionada
 
   ngOnInit() {
     this.displayQuestion(); // Llamada a la función al iniciar el componente
@@ -26,10 +26,13 @@ export class Tab51Page {
   displayQuestion() {
     this.currentQuestion = this.questions[this.currentQuestionIndex];
     this.shuffledAnswers = this.shuffleArray([...this.currentQuestion.wrong_answers, this.currentQuestion.correct_answer]);
+    this.selectedAnswer = null; // Reiniciar la respuesta seleccionada
   }
 
-  checkAnswer(selectedAnswer: any) { // Especificar el tipo de selectedAnswer
+  checkAnswer(selectedAnswer: any) { 
     const correctAnswer = this.currentQuestion.correct_answer;
+
+    this.selectedAnswer = selectedAnswer; // Rastrear la respuesta seleccionada
 
     if (selectedAnswer === correctAnswer) {
       // Respuesta correcta seleccionada
@@ -49,8 +52,6 @@ export class Tab51Page {
       // Agrega tu lógica aquí
 
       this.playSound('wrongSound');
-      // Continuar con la siguiente pregunta incluso después de una respuesta incorrecta
-      // Agrega tu lógica aquí
     }
   }
 
@@ -58,15 +59,12 @@ export class Tab51Page {
     const audio = document.getElementById(soundId) as HTMLAudioElement;
     audio.play();
   }
- 
 
-  shuffleArray(array: any[]) { // Especificar el tipo de array
+  shuffleArray(array: any[]) { 
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
   }
-
-  // Otras declaraciones y métodos
 }
