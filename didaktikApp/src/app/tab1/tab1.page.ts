@@ -21,7 +21,7 @@ export class Tab1Page {
         index++;
 
         if (index <= textToReveal.length) {
-          setTimeout(revealText, 100); // Ajusta el tiempo para controlar la velocidad
+          setTimeout(revealText, 75); // Ajusta el tiempo para controlar la velocidad
         }
       }
     }
