@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import '@angular/compiler';
 
 @Component({
   selector: 'app-tab51',
