@@ -1,0 +1,28 @@
+#content{
+margin-left: 20%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+#question {
+    margin-top: 20px;
+    max-width: 80%;
+    margin-left: 40px;
+}
+.answer {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 40px;
+}
+.correct-answer {
+    background-color: #7FFF7F;
+}
+.wrong-answer {
+    background-color: #FF7F7F;
+}
