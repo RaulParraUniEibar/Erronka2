@@ -4,9 +4,9 @@
 
 #img-container {
     display: flex;
-    flex-direction: column;  /* Cambiado a columna para apilar elementos verticalmente */
-    align-items: center;     /* Centrar horizontalmente */
-    justify-content: center; /* Centrar verticalmente */
+    flex-direction: column;  
+    align-items: center;     
+    justify-content: center; 
     margin-top: 8vh;
     margin-bottom: 5vh;
     max-width: 80%;
@@ -19,11 +19,18 @@
 }
 
 #divyoutube {
-    margin-top: 10px;  /* Ajusta el margen superior según tus preferencias */
+    margin-top: 5px; 
+    display: flex;  /* Agregado para usar flexbox y alinear elementos horizontalmente */
+    justify-content: center;  /* Alinea elementos hijos horizontalmente */
+    margin-right: 30vh;
 }
 
 #youtube {
     width: 100px;
-    margin-left: 80vh;
-    margin-right: 30vh;
+}
+
+#hurrengoaBtn {
+    align-self: flex-start;  /* Alinea el botón al inicio del contenedor flex (#img-container) */
+    margin-top: -50px;  /* Ajusta la posición vertical del botón hurrengoa */
+    margin-left: 80%;
 }
