@@ -1,7 +1,9 @@
 import { Component,ViewChild } from '@angular/core';
-import { IonButton } from '@ionic/angular';
+import { IonButton, PopoverController  } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { MiPopoverComponent } from './mi-popover.component';  // Ajusta la ruta según la ubicación real de tu componente
+
 
 @Component({
   selector: 'app-tab3',
@@ -13,7 +15,7 @@ export class Tab3Page {
   audioArrantzaleMuseoaPlayed: boolean = false;
   isAudioPlaying: boolean = false;
 
-  constructor(private router: Router, private navCtrl: NavController) { }
+  constructor(private router: Router, private navCtrl: NavController, public popoverController: PopoverController) { }
 
   @ViewChild('btnLehenengoDesberdintasuna', { static: false }) btnLehenengoDesberdintasuna: IonButton | undefined;
 
@@ -63,4 +65,19 @@ export class Tab3Page {
     this.navCtrl.navigateForward('/tabs/tab4'); // Ajusta la ruta según tu configuración de enrutamiento
   }
 
+  async presentPopover() {
+    this.stopAllAudio();
+    const popover = await this.popoverController.create({
+      component: MiPopoverComponent,
+      componentProps: {
+        content: "Arrantzale museoak euskal arrantzaleen bizitza, lana eta arrantza erakusten du, adibidez, ontziak, arrantzaleen bizitzaren eta ohituren deskribapena… Museoko areto batean, Ertzilla Dorrearen historia azaltzen da. Dorrea XV. mendearen amaieran eraiki zen eta La Araucana poemaren egilea izan zen Alonso de Ertzilla, dorre horretan bizi zen familiako kide batena. Urteak zehar obrak egiten joan dira, gehienbat estalkia konpontzeko eta guneak aprobetxatzeko. Orain dela gutxi, eraikina berriz zaharberritu da, hasierako itxura berreskuratzeko.",
+        gif: "../../assets/img/pulpo.gif"
+      },
+      translucent: true,
+      animated: true,
+      cssClass: 'custom-popover' // Agrega la clase personalizada aquí
+    });
+    
+    return await popover.present();
+  }
 }

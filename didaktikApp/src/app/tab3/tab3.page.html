@@ -36,17 +36,21 @@
     
   
   <div class="paragraph-container" id="paragraphContainer">
-    <button (click)="playAudio('ArrantzaleMuseoa')" style="margin-right: 2vh;"> <!---->
-      <audio id="ArrantzaleMuseoa" src="../../assets/audioak/Arrantzale-Museoa.mp3"></audio>
+    <button (click)="playAudio('ArrantzaleMuseoa')" style="margin-right: 2vh;">(Egin klik audioa entzuteko)<br><br>
+      <audio id="ArrantzaleMuseoa" src="../../assets/audioak/Arrantzale-Museoa2.mp3"></audio>
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
       <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5"/>
     </svg>
     </button>
     <br><br>
-    Bermeo euskal kostaldean kokaturik dagoen herri txiki bat da. Bertako Portu Zaharrean Ertzilla Dorre bat dago, oso garrantzitsua dena. Dorre hori 1943. urtean monumentu nazional izendatu zuten. Gaur egun, Bermeoko Arrantzale Museo moduan ezagutzen da.
-    <br><br>
-    Arrantzale museoak euskal arrantzaleen bizitza, lana eta arrantza erakusten du, adibidez, ontziak, arrantzaleen bizitzaren eta ohituren deskribapena… Museoko areto batean, Ertzilla Dorrearen historia azaltzen da. Dorrea XV. mendearen amaieran eraiki zen eta La Araucana poemaren egilea izan zen Alonso de Ertzilla, dorre horretan bizi zen familiako kide batena.
-    Urteak zehar obrak egiten joan dira, gehienbat estalkia konpontzeko eta guneak aprobetxatzeko. Orain dela gutxi, eraikina berriz zaharberritu da, hasierako itxura berreskuratzeko.
+    <p id="bermeoText">
+      Bermeo euskal kostaldean kokaturik dagoen herri txiki bat da. Bertako Portu Zaharrean Ertzilla Dorre bat dago, oso garrantzitsua dena. Dorre hori 1943. urtean monumentu nazional izendatu zuten. Gaur egun,
+      <button class="basic-button" (click)="presentPopover()">💡🐙Bermeoko Arrantzale Museoa🐙💡</button> <audio id="audio69" src="../../assets/audioak/Arrantzale-Museoa2.mp3"></audio> moduan ezagutzen da.
+    </p>
+    
+    
+    
+
     <br><br>   
     
   </div>
@@ -58,5 +62,4 @@
   </div>
 
 </div>
-
 </ion-content>

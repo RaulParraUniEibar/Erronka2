@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
+import { MiPopoverComponent } from './mi-popover.component'; // Cambia la importación
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 
 @NgModule({
@@ -15,6 +15,6 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
     ExploreContainerComponentModule,
     Tab3PageRoutingModule
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page, MiPopoverComponent]
 })
 export class Tab3PageModule {}

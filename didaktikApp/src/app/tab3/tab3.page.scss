@@ -23,3 +23,12 @@
     max-width: 80%;
     margin-left: 20vh;
 }
+
+.basic-button {
+  border: none; /* Fondo transparente */
+  padding: 0; /* Sin relleno */
+  color: inherit; /* Hereda el color de texto del contenedor */
+  text-decoration: underline; /* Subrayado */
+  cursor: pointer; /* Cursor de puntero */
+  font-size: inherit; /* Tamaño de fuente igual al del contenedor */
+}
