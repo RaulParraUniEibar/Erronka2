@@ -60,6 +60,10 @@ const routes: Routes = [
         loadChildren: () => import('../tab62/tab62.module').then(m => m.Tab62PageModule)
       },
       {
+        path: 'tab63',
+        loadChildren: () => import('../tab63/tab63.module').then( m => m.Tab63PageModule)
+      },
+      {
         path: 'tab51',
         loadChildren: () => import('../tab51/tab51.module').then(m => m.Tab51PageModule)
       },

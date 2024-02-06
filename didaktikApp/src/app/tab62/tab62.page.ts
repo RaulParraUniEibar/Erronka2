@@ -13,7 +13,7 @@ export class Tab62Page {
   ngOnInit() {
     setInterval(() => {
       this.cambiarImagenes();
-    }, 5000);
+    }, 7000);
   }
 
 cambiarImagenes() {
@@ -32,6 +32,6 @@ cambiarImagenes() {
 
   hurrengoaButtonClicked() {
     // Detener todos los audios antes de navegar a la siguiente página
-    this.navCtrl.navigateForward('/tabs/tab6'); // Ajusta la ruta según tu configuración de enrutamiento
+    this.navCtrl.navigateForward('/tabs/tab63'); // Ajusta la ruta según tu configuración de enrutamiento
   }
 }
