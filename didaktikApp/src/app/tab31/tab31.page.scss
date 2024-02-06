@@ -1,0 +1,25 @@
+ion-content {
+    --overflow: hidden;
+  }
+
+  .scroll-y {
+    overflow-y:hidden !important; 
+  }
+
+  #nextbutton {
+    float: right;
+    margin-top: 80vh;
+    margin-right: 13vh;
+}
+
+.iframe {
+    margin-left: 17%;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    border: none;
+}

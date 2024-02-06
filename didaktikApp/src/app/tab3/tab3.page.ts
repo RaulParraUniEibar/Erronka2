@@ -62,7 +62,7 @@ export class Tab3Page {
   hurrengoaButtonClicked() {
     // Detener todos los audios antes de navegar a la siguiente página
     this.stopAllAudio();
-    this.navCtrl.navigateForward('/tabs/tab4'); // Ajusta la ruta según tu configuración de enrutamiento
+    this.navCtrl.navigateForward('/tabs/tab31'); // Ajusta la ruta según tu configuración de enrutamiento
   }
 
   async presentPopover() {
