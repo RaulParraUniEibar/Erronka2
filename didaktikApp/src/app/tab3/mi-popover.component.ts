@@ -71,7 +71,6 @@ export class MiPopoverComponent implements OnInit, OnDestroy {
 
   playAudio() {
     const audioSrc = '../../assets/audioak/Arrantzale-Museoa.mp3';
-    const audio2Src = '../../assets/audioak/Arrantzale-Museoa2.mp3';
 
     if (this.isAudioPlaying) {
       return;

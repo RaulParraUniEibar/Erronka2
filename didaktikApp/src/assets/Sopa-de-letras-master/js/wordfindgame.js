@@ -223,7 +223,10 @@
         }
 
         if (wordList.length === 0) {
+          console.log('Mensaje enviado:');
           $('.puzzleSquare').addClass('complete');
+          window.parent.postMessage('sopa-completada', '*'); // '*': Envía el mensaje a cualquier origen
+
         }
       }
 

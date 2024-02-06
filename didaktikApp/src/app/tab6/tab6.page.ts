@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab6',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab6.page.scss'],
 })
 export class Tab6Page implements OnInit {
-
-  constructor() { }
+  
+  constructor(private navCtrl: NavController) { }
+  completed: boolean = false;
 
   ngOnInit() {
+    window.addEventListener('message', this.handleMessage.bind(this), false);
+  }
+
+  handleMessage(event: MessageEvent) {
+    console.log('Mensaje recibido:');
+    this.completed = true
+  }
+
+  hurrengoaButtonClicked() {
+    this.navCtrl.navigateForward('/tabs/tab71');
   }
 
 }

@@ -71,7 +71,11 @@ const routes: Routes = [
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
-      }
+      },
+      {
+        path: 'tab71',
+        loadChildren: () => import('../tab71/tab71.module').then( m => m.Tab71PageModule)
+      },
     ]
   },
   {
