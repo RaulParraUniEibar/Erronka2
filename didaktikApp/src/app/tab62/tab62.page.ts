@@ -8,6 +8,9 @@ import { NavController } from '@ionic/angular';
 })
 export class Tab62Page {
 
+  primerasCincoPasadas: boolean = false;
+  imagenesPasadas: number = 0;
+
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
@@ -16,19 +19,26 @@ export class Tab62Page {
     }, 7000);
   }
 
-cambiarImagenes() {
-  var imagenes = document.querySelectorAll('.carousel img');
-  if (imagenes.length > 0) {
-    var primeraImagen = imagenes[0];
-    var ultimaImagen = imagenes[imagenes.length - 1];
+  cambiarImagenes() {
+    var imagenes = document.querySelectorAll('.carousel img');
+    if (imagenes.length > 0) {
+      var primeraImagen = imagenes[0];
+      var ultimaImagen = imagenes[imagenes.length - 1];
 
-    // Mueve la primera imagen al final del carrusel
-    if (primeraImagen && primeraImagen.parentNode) {
-      primeraImagen.parentNode.appendChild(primeraImagen.cloneNode(true));
-      primeraImagen.parentNode.removeChild(primeraImagen);
+      if (primeraImagen && primeraImagen.parentNode) {
+        primeraImagen.parentNode.appendChild(primeraImagen.cloneNode(true));
+        primeraImagen.parentNode.removeChild(primeraImagen);
+
+        this.imagenesPasadas++; // Incrementa el contador de imágenes pasadas
+
+        // Verifica si se han pasado las primeras 5 imágenes y establece la bandera en consecuencia
+        if (this.imagenesPasadas >= 5 && !this.primerasCincoPasadas) {
+          this.primerasCincoPasadas = true;
+        }
+      }
     }
   }
-}
+  
 
   hurrengoaButtonClicked() {
     // Detener todos los audios antes de navegar a la siguiente página
