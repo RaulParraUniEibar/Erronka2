@@ -15,6 +15,6 @@ export class Tab61Page implements OnInit {
 
   hurrengoaButtonClicked() {
     // Detener todos los audios antes de navegar a la siguiente página
-    this.navCtrl.navigateForward('/tabs/tab6'); // Ajusta la ruta según tu configuración de enrutamiento
+    this.navCtrl.navigateForward('/tabs/tab62'); // Ajusta la ruta según tu configuración de enrutamiento
   }
 }
