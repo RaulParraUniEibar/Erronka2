@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab51',
@@ -6,12 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./tab51.page.scss'],
 })
 export class Tab51Page {
+
+  constructor(private navCtrl : NavController) { }
+
   currentQuestion: any;
-  shuffledAnswers: any[] = []; // Inicializar el array
-  selectedAnswer: any = null; // Nueva propiedad para rastrear la respuesta seleccionada
+  shuffledAnswers: any[] = [];
+  selectedAnswer: any = null;
+  questionsAnswered: number = 0;
 
   ngOnInit() {
-    this.displayQuestion(); // Llamada a la función al iniciar el componente
+    this.displayQuestion();
   }
 
   questions = [
@@ -26,31 +31,30 @@ export class Tab51Page {
   displayQuestion() {
     this.currentQuestion = this.questions[this.currentQuestionIndex];
     this.shuffledAnswers = this.shuffleArray([...this.currentQuestion.wrong_answers, this.currentQuestion.correct_answer]);
-    this.selectedAnswer = null; // Reiniciar la respuesta seleccionada
+    this.selectedAnswer = null;
   }
 
   checkAnswer(selectedAnswer: any) { 
     const correctAnswer = this.currentQuestion.correct_answer;
 
-    this.selectedAnswer = selectedAnswer; // Rastrear la respuesta seleccionada
+    this.selectedAnswer = selectedAnswer;
 
     if (selectedAnswer === correctAnswer) {
-      // Respuesta correcta seleccionada
-      // Agrega tu lógica aquí
-
       this.playSound('correctSound');
+      this.questionsAnswered++;
+
+      if (this.questionsAnswered === this.questions.length) {
+        this.enableNextButton(); // Llamar a la función para habilitar el botón cuando todas las preguntas hayan sido respondidas
+      }
+
       this.currentQuestionIndex++;
 
       if (this.currentQuestionIndex < this.questions.length) {
         setTimeout(() => this.displayQuestion(), 1000);
       } else {
         // Juego terminado
-        // Agrega tu lógica aquí
       }
     } else {
-      // Respuesta incorrecta seleccionada
-      // Agrega tu lógica aquí
-
       this.playSound('wrongSound');
     }
   }
@@ -66,5 +70,16 @@ export class Tab51Page {
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+  }
+
+  enableNextButton() {
+    const nextButton = document.getElementById('nextButton') as HTMLButtonElement; // Obtener el botón por su ID
+    if (nextButton) {
+      nextButton.disabled = false; // Habilitar el botón
+    }
+  }
+
+  hurrengoaButtonClicked() {
+    this.navCtrl.navigateForward('/tabs/tab61');
   }
 }

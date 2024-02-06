@@ -26,3 +26,9 @@ body {
 .wrong-answer {
     background-color: #FF7F7F;
 }
+
+#hurrengoaBtn {
+    align-self: flex-start;  /* Alinea el botón al inicio del contenedor flex (#img-container) */
+    margin-top: 150px;  /* Ajusta la posición vertical del botón hurrengoa */
+    margin-left: 80%;
+}
