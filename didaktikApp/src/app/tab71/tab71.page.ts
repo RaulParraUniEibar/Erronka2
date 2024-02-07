@@ -22,6 +22,6 @@ export class Tab71Page implements OnInit {
     }
 
     // Navegar a la siguiente página
-    this.navCtrl.navigateForward('/tabs/tab7');
+    this.navCtrl.navigateForward('/tabs/tab72');
   }
 }

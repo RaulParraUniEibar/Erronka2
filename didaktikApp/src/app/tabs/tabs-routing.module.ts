@@ -80,6 +80,10 @@ const routes: Routes = [
         path: 'tab71',
         loadChildren: () => import('../tab71/tab71.module').then( m => m.Tab71PageModule)
       },
+      {
+        path: 'tab72',
+        loadChildren: () => import('../tab72/tab72.module').then( m => m.Tab72PageModule)
+      },
     ]
   },
   {

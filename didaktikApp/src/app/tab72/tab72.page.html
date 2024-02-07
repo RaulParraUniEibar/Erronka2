@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tab51</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- Sección de preguntas y respuestas -->
+  <div id="content">
+    <div id="question">{{ currentQuestion?.question }}</div>
+    <div id="answers">
+      <div *ngFor="let answer of shuffledAnswers"
+     class="answer"
+     [class.correct-answer]="answer === currentQuestion.correct_answer && answer === selectedAnswer"
+     [class.wrong-answer]="answer !== currentQuestion.correct_answer && answer === selectedAnswer"
+     (click)="checkAnswer(answer)">
+  {{ answer }}
+</div>
+
+    </div>
+  </div>
+  <audio id="correctSound" src="../../assets/audioak/correct.mp3" type="audio/mp3"></audio>
+  <audio id="wrongSound" src="../../assets/audioak/wrong.mp3" type="audio/mp3"></audio>
+
+  <div id="hurrengoaBtn">
+    <button (click)="hurrengoaButtonClicked()" id="nextButton72" disabled> <!--[disabled]="!areAudiosPlayed"-->
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+    </svg></button>
+  </div>
+
+</ion-content>
