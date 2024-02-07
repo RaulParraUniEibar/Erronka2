@@ -20,8 +20,8 @@ export class Tab51Page {
   }
 
   questions = [
-    { question: 'non biltzen dira marinelak?', wrong_answers: ['Olatuan.', 'San Frantzisko elizan.'], correct_answer: 'San Pedro Arrantzale kofradian.' },
-    { question: 'zergaitik uste duzu garrantzitsua dela?', wrong_answers: [], correct_answer: 'Galdera Irekia, Ahoz azaldu' },
+    { question: 'Non biltzen dira marinelak?', wrong_answers: ['Olatuan.', 'San Frantzisko elizan.'], correct_answer: 'San Pedro Arrantzale kofradian.' },
+    { question: 'Zergaitik uste duzu garrantzitsua dela?', wrong_answers: [], correct_answer: 'Galdera Irekia, Ahoz azaldu' },
     { question: 'Zenbat atonontzi daude?', wrong_answers: ['33', '92'], correct_answer: '27' },
     { question: 'Zeintzuk dira gehien arrantzatzen diren arrainak?', wrong_answers: ['Berdelak eta Antxoak','Hegaluzeak'], correct_answer: 'Hegaluzeak, antxoak, berdelak eta legatzak' }
   ];
