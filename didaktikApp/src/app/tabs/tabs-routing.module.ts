@@ -84,6 +84,10 @@ const routes: Routes = [
         path: 'tab72',
         loadChildren: () => import('../tab72/tab72.module').then( m => m.Tab72PageModule)
       },
+      {
+        path: 'tab52',
+        loadChildren: () => import('../tab52/tab52.module').then( m => m.Tab52PageModule)
+      },
     ]
   },
   {

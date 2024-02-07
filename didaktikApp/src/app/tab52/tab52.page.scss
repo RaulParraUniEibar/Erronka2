@@ -1,0 +1,21 @@
+.container{
+    max-height: 1080px;
+  }
+
+.paragraph-container {
+    margin-left: 25vh;
+    margin-right: 25vh;
+    margin-top: 5%;
+    max-width: 80%;
+    float: right;
+    margin-bottom: 5vh;
+  }
+
+#hurrengoaBtn {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón al extremo derecho del contenedor */
+    clear: both;
+    max-width: 80%;
+    margin-left: 20vh;
+}
+
