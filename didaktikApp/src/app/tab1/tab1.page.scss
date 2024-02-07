@@ -44,7 +44,6 @@
     justify-content: space-between;
     margin-top: 0.5vh;
     margin-left: 20vh;
-    margin-bottom: 5vh;
     float: left;
     max-width: 80%;
   }
@@ -68,10 +67,9 @@
 .dialog-box {
   width: 140vh;
   border-radius: 5px;
-  margin: 20px;
   margin-left: 5vh;
   float: left;
-  padding: 5px;
+  margin-top: 10px;
 }
 
 .dialog-text {
