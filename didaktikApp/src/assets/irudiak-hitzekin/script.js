@@ -193,6 +193,7 @@ function confetti() {
     overlay.style.display = "flex";
     console.log("Confetti!!!");
     console.log("cont: " + cont);
+    window.parent.postMessage('irudiak-hitzekin', '*'); // '*': Envía el mensaje a cualquier origen
   } else {
     console.log("No confetti :(");
     console.log("cont: " + cont);

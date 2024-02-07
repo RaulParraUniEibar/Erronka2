@@ -16,8 +16,10 @@ export class Tab6Page implements OnInit {
   }
 
   handleMessage(event: MessageEvent) {
-    console.log('Mensaje recibido:');
-    this.completed = true
+    if (event.data === 'sopa-completada') {
+      console.log('Mensaje recibido:', event.data);
+      this.completed = true;
+    }
   }
 
   hurrengoaButtonClicked() {

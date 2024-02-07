@@ -16,12 +16,14 @@ export class Tab31Page implements OnInit {
   }
 
   handleMessage(event: MessageEvent) {
-    console.log('Mensaje recibido:');
-    this.completed = true
+    if (event.data === 'irudiak-hitzekin') {
+      console.log('Mensaje recibido:', event.data);
+      this.completed = true;
+    }
   }
 
   hurrengoaButtonClicked() {
-    this.navCtrl.navigateForward('/tabs/tab71');
+    this.navCtrl.navigateForward('/tabs/tab4');
   }
   
 }
