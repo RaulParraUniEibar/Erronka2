@@ -15,6 +15,13 @@ ion-tab-bar {
   height: 100%; /* Ajusta según sea necesario para la altura de la barra de pestañas */
   background-color: #90C5F6;
 }
+/* Estilos para los botones */
+
+/* Estilos específicos para los botones deshabilitados */
+ion-tab-button[disabled] {
+  opacity: 1; /* Opacidad completa */
+  pointer-events: auto; /* Habilitar eventos del mouse */
+}
 
 ion-tab-button {
   width: 100%;
