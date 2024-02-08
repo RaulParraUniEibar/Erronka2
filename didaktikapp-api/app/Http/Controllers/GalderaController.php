@@ -30,9 +30,10 @@ class GalderaController extends Controller
         $galdera->update($request->all());
         return response()->json($galdera,200);
     }
-    public function delete(Galdera $galdera)
-    {
-        $galdera->delete($request->all());
-        return response()->json(null, 204);
-    }
+    public function delete(Request $request, Galdera $galdera)
+{
+    $galdera->delete(); // Eliminar la Galdera
+    return response()->json(null, 204); // Retornar una respuesta con código 204 (No Content)
+}
+
 }
