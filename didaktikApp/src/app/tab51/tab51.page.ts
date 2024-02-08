@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http'; // Importa el módulo HttpClient
 
 @Component({
   selector: 'app-tab51',
@@ -8,48 +9,67 @@ import { NavController } from '@ionic/angular';
 })
 export class Tab51Page {
 
-  constructor(private navCtrl : NavController) { }
+  constructor(private navCtrl: NavController, private http: HttpClient) { }
 
   currentQuestion: any;
   shuffledAnswers: any[] = [];
   selectedAnswer: any = null;
   questionsAnswered: number = 0;
+  questionss: string[] = []; // Array para almacenar las preguntas
+  questions: any[] = []; // Array para almacenar las preguntas con respuestas
 
   ngOnInit() {
+    this.getQuestions();
+  }
+
+  getQuestions() {
+    this.http.get<any[]>('http://localhost:8000/api/galderas/').subscribe(
+      (data) => {
+        // Extrae solo los valores de la columna "galdera" y almacénalos en el array "questionss"
+        this.questionss = data.map(item => item.galdera);
+
+        // Luego de obtener las preguntas, construye el array de preguntas con respuestas
+        this.constructQuestions();
+      },
+      (error) => {
+        console.error('Error al obtener las preguntas:', error);
+      }
+    );
+  }
+
+  constructQuestions() {
+    this.questions = [
+      { question: this.questionss[0], wrong_answers: ['Olatuan.', 'San Frantzisko elizan.'], correct_answer: 'San Pedro Arrantzale kofradian.' },
+      { question: this.questionss[1], wrong_answers: [], correct_answer: 'Galdera Irekia, Ahoz azaldu' },
+      { question: this.questionss[2], wrong_answers: ['33', '92'], correct_answer: '27' },
+      { question: this.questionss[3], wrong_answers: ['Berdelak eta Antxoak', 'Hegaluzeak'], correct_answer: 'Hegaluzeak, antxoak, berdelak eta legatzak' }
+    ];
+
+    // Después de construir las preguntas, muestra la primera
     this.displayQuestion();
   }
 
-  questions = [
-    { question: 'Non biltzen dira marinelak?', wrong_answers: ['Olatuan.', 'San Frantzisko elizan.'], correct_answer: 'San Pedro Arrantzale kofradian.' },
-    { question: 'Zergaitik uste duzu garrantzitsua dela?', wrong_answers: [], correct_answer: 'Galdera Irekia, Ahoz azaldu' },
-    { question: 'Zenbat atonontzi daude?', wrong_answers: ['33', '92'], correct_answer: '27' },
-    { question: 'Zeintzuk dira gehien arrantzatzen diren arrainak?', wrong_answers: ['Berdelak eta Antxoak','Hegaluzeak'], correct_answer: 'Hegaluzeak, antxoak, berdelak eta legatzak' }
-  ];
-
-  currentQuestionIndex = 0;
-
   displayQuestion() {
-    this.currentQuestion = this.questions[this.currentQuestionIndex];
+    this.currentQuestion = this.questions[this.questionsAnswered];
     this.shuffledAnswers = this.shuffleArray([...this.currentQuestion.wrong_answers, this.currentQuestion.correct_answer]);
     this.selectedAnswer = null;
   }
 
-  checkAnswer(selectedAnswer: any) { 
+  checkAnswer(selectedAnswer: any) {
     const correctAnswer = this.currentQuestion.correct_answer;
-
+  
     this.selectedAnswer = selectedAnswer;
-
+  
     if (selectedAnswer === correctAnswer) {
       this.playSound('correctSound');
       this.questionsAnswered++;
-
+  
       if (this.questionsAnswered === this.questions.length) {
         this.enableNextButton(); // Llamar a la función para habilitar el botón cuando todas las preguntas hayan sido respondidas
       }
-
-      this.currentQuestionIndex++;
-
-      if (this.currentQuestionIndex < this.questions.length) {
+  
+      if (this.questionsAnswered < this.questions.length) {
+        // Si quedan preguntas, mostrar la siguiente después de un tiempo
         setTimeout(() => this.displayQuestion(), 1000);
       } else {
         // Juego terminado
